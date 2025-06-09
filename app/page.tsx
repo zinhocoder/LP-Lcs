@@ -637,7 +637,7 @@ export default function LCSLandingPage() {
             </div>
             <div className="flex items-center">
               <MapPin className="w-5 h-5 mr-2" />
-              <span className="text-lg">Poto Alegre - RS</span>
+              <span className="text-lg">Porto Alegre - RS</span>
             </div>
           </div>
         </div>
