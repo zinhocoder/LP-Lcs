@@ -216,7 +216,7 @@ export default function LCSLandingPage() {
                 <CardContent className="p-6">
                   <div className="relative overflow-hidden rounded-lg">
                     <Image
-                      src="/lcs-worker.png"
+                      src="/limphero.png"
                       alt="Profissional LCS em ação"
                       width={400}
                       height={500}
@@ -230,6 +230,56 @@ export default function LCSLandingPage() {
                   </div>
                 </CardContent>
               </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-16 px-4 bg-gradient-to-r from-blue-50 to-cyan-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center group">
+                <div className="bg-white rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
+                  <div className="text-blue-600">{stat.icon}</div>
+                </div>
+                <div className="text-3xl md:text-4xl font-bold text-slate-800 mb-2">{stat.number}</div>
+                <div className="text-gray-600 font-medium">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Video Section */}
+      <section className="py-24 px-4 bg-slate-900 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Veja a LCS em <span className="text-blue-400">Ação</span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Conheça de perto como trabalhamos e a qualidade dos nossos serviços
+            </p>
+          </div>
+
+          <div className="relative max-w-5xl mx-auto">
+            <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+              <video className="w-full h-auto" controls autoPlay muted loop preload="metadata">
+                <source src="/vsl.mp4" type="video/mp4" />
+                Seu navegador não suporta o elemento de vídeo.
+              </video>
+
+              {/* Video Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent pointer-events-none opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+
+            {/* Video Description */}
+            <div className="mt-8 text-center">
+              <p className="text-gray-300 text-lg">
+                Assista e descubra por que mais de 500 clientes confiam na LCS Terceirização
+              </p>
             </div>
           </div>
         </div>
@@ -287,23 +337,6 @@ export default function LCSLandingPage() {
                 </CardContent>
               </Card>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-blue-50 to-cyan-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center group">
-                <div className="bg-white rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
-                  <div className="text-blue-600">{stat.icon}</div>
-                </div>
-                <div className="text-3xl md:text-4xl font-bold text-slate-800 mb-2">{stat.number}</div>
-                <div className="text-gray-600 font-medium">{stat.label}</div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -511,8 +544,8 @@ export default function LCSLandingPage() {
                   Vocês atendem em quais regiões?
                 </h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Atendemos toda a região metropolitana de Porto Alegre e interior. Para outras localidades, consulte nossa
-                  equipe para verificar disponibilidade.
+                  Atendemos toda a região metropolitana de Porto Alegre e interior. Para outras localidades, consulte
+                  nossa equipe para verificar disponibilidade.
                 </p>
               </CardContent>
             </Card>
@@ -633,11 +666,11 @@ export default function LCSLandingPage() {
             </div>
             <div className="flex items-center">
               <Mail className="w-5 h-5 mr-2" />
-              <span className="text-lg">contato@lcsterceirizacao.com.br</span>
+              <span className="text-lg">lcs@lcsterceirizacao.com.br</span>
             </div>
             <div className="flex items-center">
               <MapPin className="w-5 h-5 mr-2" />
-              <span className="text-lg">Porto Alegre - RS</span>
+              <span className="text-lg">Poto Alegre - RS</span>
             </div>
           </div>
         </div>
